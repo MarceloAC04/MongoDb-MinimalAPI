@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using minimalAPIMongo.Properties.Domains;
 using minimalAPIMongo.Properties.Services;
 using MongoDB.Driver;
+using System.Reflection;
 
 namespace minimalAPIMongo.Properties.Controllers
 {
@@ -82,7 +83,7 @@ namespace minimalAPIMongo.Properties.Controllers
         {
             try
             {
-                var product = await _product.FindAsync(p => p.Id == id).T;
+                var product = await _product.Find(p => p.Id == id).FirstOrDefaultAsync();
                 if (product == null)
                 {
                     return NotFound();
@@ -95,6 +96,26 @@ namespace minimalAPIMongo.Properties.Controllers
             {
 
                 return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Update(Product updatedProduct)
+        {
+            try
+            {
+                var filter = Builders<Product>.Filter.Eq(x => x.Id, updatedProduct.Id);
+
+                await _product.ReplaceOneAsync(filter, updatedProduct);
+
+                return Ok();
+
+
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
             }
         }
     }

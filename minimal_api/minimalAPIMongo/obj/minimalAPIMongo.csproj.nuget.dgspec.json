@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48260449846\\Desktop\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj": {}
+    "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48260449846\\Desktop\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj": {
+    "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48260449846\\Desktop\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj",
+        "projectUniqueName": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj",
         "projectName": "minimalAPIMongo",
-        "projectPath": "C:\\Users\\48260449846\\Desktop\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj",
+        "projectPath": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\minimalAPIMongo.csproj",
         "packagesPath": "C:\\Users\\48260449846\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48260449846\\Desktop\\minimal_api\\minimalAPIMongo\\obj\\",
+        "outputPath": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
