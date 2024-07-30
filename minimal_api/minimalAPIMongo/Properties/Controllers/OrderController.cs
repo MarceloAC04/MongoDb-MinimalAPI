@@ -2,29 +2,52 @@
 using Microsoft.AspNetCore.Mvc;
 using minimalAPIMongo.Properties.Domains;
 using minimalAPIMongo.Properties.Services;
+using minimalAPIMongo.ViewModels;
 using MongoDB.Driver;
 
 namespace minimalAPIMongo.Properties.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces("application/json")]
     public class OrderController : ControllerBase
     {
         private readonly IMongoCollection<Order> _order;
+        private readonly IMongoCollection<Client> _client;
+        private readonly IMongoCollection<Product> _product;
 
         public OrderController(MongoDbService mongoDbService)
         {
             _order = mongoDbService.GetDatabase.GetCollection<Order>("order");
+            _client = mongoDbService.GetDatabase.GetCollection<Client>("client");
+            _product = mongoDbService.GetDatabase.GetCollection<Product>("product");
         }
 
         [HttpPost]
-        public async Task<ActionResult<Order>> Create([FromBody] Order newOrder)
+        public async Task<ActionResult<Order>> Create(OrderViewModel orderView)
         {
             try
             {
-                await _order.InsertOneAsync(newOrder);
+                Order order = new Order();
 
-                return StatusCode(201, newOrder);
+                order.Id = orderView.Id;
+                order.Date  = orderView.Date;
+                order.Status = orderView.Status;
+                order.ProductId = orderView.ProductId;
+                order.ClientId = orderView.ClientId;
+
+                var client = await _client.Find(x => x.Id == order.ClientId).FirstOrDefaultAsync();
+
+                if (client == null)
+                {
+                    return NotFound();
+                }
+                
+                order.Client = client;
+                
+                await _order.InsertOneAsync(order);
+
+                return StatusCode(201, order);
             }
             catch (Exception e)
             {

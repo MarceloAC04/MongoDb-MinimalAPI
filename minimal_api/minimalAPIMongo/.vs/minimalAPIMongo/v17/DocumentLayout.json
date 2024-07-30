@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|solutionrelative:properties\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|c:\\users\\48260449846\\desktop\\mongodb-minimalapi\\minimal_api\\minimalapimongo\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|solutionrelative:viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|c:\\users\\48260449846\\desktop\\mongodb-minimalapi\\minimal_api\\minimalapimongo\\properties\\domains\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|solutionrelative:properties\\domains\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|c:\\users\\48260449846\\desktop\\mongodb-minimalapi\\minimal_api\\minimalapimongo\\properties\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|solutionrelative:properties\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|c:\\users\\48260449846\\desktop\\mongodb-minimalapi\\minimal_api\\minimalapimongo\\properties\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81650110-ED7D-4D62-9DBF-3F4BC24C1358}|minimalAPIMongo.csproj|solutionrelative:properties\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,43 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\Properties\\Domains\\Order.cs",
               "RelativeDocumentMoniker": "Properties\\Domains\\Order.cs",
               "ToolTip": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\Properties\\Domains\\Order.cs",
               "RelativeToolTip": "Properties\\Domains\\Order.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwCAAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:35:41.936Z"
+              "WhenOpened": "2024-07-29T13:35:41.936Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\Properties\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Properties\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\Properties\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Properties\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\ViewModels\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\OrderViewModel.cs",
+              "ToolTip": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\ViewModels\\OrderViewModel.cs",
+              "RelativeToolTip": "ViewModels\\OrderViewModel.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAgwBsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:35:39.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientController.cs",
-              "DocumentMoniker": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\Properties\\Controllers\\ClientController.cs",
-              "RelativeDocumentMoniker": "Properties\\Controllers\\ClientController.cs",
-              "ToolTip": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\Properties\\Controllers\\ClientController.cs",
-              "RelativeToolTip": "Properties\\Controllers\\ClientController.cs",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAuwIMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:30:48.523Z"
+              "WhenOpened": "2024-07-30T13:25:25.853Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,7 +58,7 @@
               "RelativeDocumentMoniker": "Properties\\Controllers\\OrderController.cs",
               "ToolTip": "C:\\Users\\48260449846\\Desktop\\MongoDb-MinimalAPI\\minimal_api\\minimalAPIMongo\\Properties\\Controllers\\OrderController.cs",
               "RelativeToolTip": "Properties\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAAA8AAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T13:11:56.774Z",
               "EditorCaption": ""
