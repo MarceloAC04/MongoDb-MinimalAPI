@@ -44,8 +44,25 @@ namespace minimalAPIMongo.Properties.Controllers
                 }
                 
                 order.Client = client;
-                
-                await _order.InsertOneAsync(order);
+
+                var lista = new List<Product>();
+
+                foreach (string productId in order.ProductId!)
+                {
+                    var product = await _product.Find(p => p.Id == productId).FirstOrDefaultAsync();
+
+                    if (product == null)
+                    {
+                        return NotFound();
+                    }
+
+                    lista.Add(product);
+
+                }
+
+                order.Products = lista;
+
+                await _order!.InsertOneAsync(order);
 
                 return StatusCode(201, order);
             }
@@ -75,7 +92,7 @@ namespace minimalAPIMongo.Properties.Controllers
         {
             try
             {
-                var order = _order.FindOneAndDeleteAsync(p => p.Id == id);
+                var order = await _order.FindOneAndDeleteAsync(p => p.Id == id);
 
                 if (order == null)
                 {
@@ -100,6 +117,7 @@ namespace minimalAPIMongo.Properties.Controllers
                 {
                     return NotFound();
                 }
+
 
                 return Ok(order);
 
@@ -133,11 +151,44 @@ namespace minimalAPIMongo.Properties.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Update(Order updatedOrder)
+        public async Task<ActionResult> Update(OrderViewModel viewOrder)
         {
             try
             {
-                var filter = Builders<Order>.Filter.Eq(x => x.Id, updatedOrder.Id);
+                Order updatedOrder = new Order();
+
+                updatedOrder.Id = viewOrder.Id;
+                updatedOrder.Date = viewOrder.Date;
+                updatedOrder.Status = viewOrder.Status;
+                updatedOrder.ProductId = viewOrder.ProductId;
+                updatedOrder.ClientId = viewOrder.ClientId;
+
+                var client = await _client.Find(x => x.Id == updatedOrder.ClientId).FirstOrDefaultAsync();
+
+                if (client == null)
+                {
+                    return NotFound();
+                }
+
+                updatedOrder.Client = client;
+
+                var lista = new List<Product>();
+
+                foreach (string productId in updatedOrder.ProductId!)
+                {
+                    var product = await _product.Find(p => p.Id == productId).FirstOrDefaultAsync();
+
+                    if (product == null)
+                    {
+                        return NotFound();
+                    }
+
+                    lista.Add(product);
+
+                }
+
+                updatedOrder.Products = lista;
+                var filter = Builders<Order>.Filter.Eq(x => x.Id, viewOrder.Id);
 
                 await _order.ReplaceOneAsync(filter, updatedOrder);
 
@@ -145,10 +196,10 @@ namespace minimalAPIMongo.Properties.Controllers
 
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                return BadRequest();
+                return BadRequest(e.Message);
             }
         }
     }

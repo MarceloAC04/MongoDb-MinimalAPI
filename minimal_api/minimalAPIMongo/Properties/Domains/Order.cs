@@ -24,6 +24,7 @@ namespace minimalAPIMongo.Properties.Domains
         public List<string>? ProductId { get; set; }
 
         //referência para listagem de produtos
+        [BsonElement("product")]
         public List<Product>? Products { get; set; }
 
         //referência ao cliente
@@ -32,6 +33,7 @@ namespace minimalAPIMongo.Properties.Domains
         [JsonIgnore]
         public string? ClientId { get; set; }
 
+        [BsonElement("client")]
         public Client? Client { get; set; }
     }
 }
